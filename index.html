@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Z Energy – Home (Mobile 01)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="nav">
+      <a class="nav__logo" href="index.html" aria-label="Z home"><img src="assets/z-mark.svg" alt="Z"></a>
+      <span class="nav__spacer"></span>
+      <button class="nav__icon" type="button" aria-label="Search" data-toast="Search isn't part of this test"><img src="assets/search.svg" alt=""></button>
+      <button class="nav__icon" type="button" aria-label="Menu" data-toast="Menu screen not built yet"><img src="assets/menu.svg" alt=""></button>
+    </header>
+
+    <main>
+      <section class="hero-banner" aria-label="Z is for New Zealand">
+        <div class="hero-card">
+          <p class="hero-card__title">Z is <span class="for">for</span> New Zealand</p>
+          <p class="hero-card__sub">Powering better journeys, today and tomorrow</p>
+          <a class="hero-card__down" href="#find" aria-label="Scroll down"><img src="assets/hero-down.svg" alt=""></a>
+        </div>
+      </section>
+
+      <section class="promo" id="find">
+        <div class="promo__card">
+          <h1 class="promo__title">There where you need us</h1>
+          <a class="btn-arrow" href="journey-hub.html">
+            Find a Z Station
+            <span class="btn-arrow__circle"><img src="assets/btn-arrow.svg" alt=""></span>
+          </a>
+          <p class="promo__text">Use our Journey Hub to find your closest Z, compare prices and plan your trip</p>
+        </div>
+      </section>
+
+      <section class="section section--station">
+        <h2 class="section__title section__title--navy">At the station</h2>
+        <div class="chip-row">
+          <div class="svc-chip svc-chip--figtree"><img src="assets/svc-paypump.svg" alt="">Pay at Pump</div>
+          <div class="svc-chip"><img src="assets/svc-carwash.svg" alt="">Car wash</div>
+        </div>
+        <div class="chip-row" style="gap:17px">
+          <div class="svc-chip"><img src="assets/svc-ev.svg" alt="">EV charging</div>
+          <div class="svc-chip"><img src="assets/svc-lpg.svg" alt="">LPG swap</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" style="padding-top:16px">
+      <div class="footer__card">
+        <nav class="footer__menu" aria-label="Footer">
+          <button type="button" aria-expanded="false">Z App <img src="assets/chevron-down.svg" alt=""></button>
+          <button type="button" aria-expanded="false">For businesses <img src="assets/chevron-down.svg" alt=""></button>
+          <button type="button" aria-expanded="false">About Z <img src="assets/chevron-down.svg" alt=""></button>
+          <button type="button" aria-expanded="false">Rewards and promotions <img src="assets/chevron-down.svg" alt=""></button>
+        </nav>
+        <div class="footer__divider"></div>
+        <div class="footer__social"><img src="assets/social.svg" alt="Facebook, Instagram, LinkedIn, TikTok"></div>
+        <div>
+          <p class="footer__app-title">Get the Z App</p>
+          <div class="footer__badges">
+            <span class="badge-gplay" role="img" aria-label="Get it on Google Play"></span>
+            <span class="badge-appstore" aria-label="Download on the App Store"><small>Download on the</small><strong>App Store</strong></span>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Fuel and Store Products Safety</a>
+          <a href="#">Investor relations</a>
+          <p>© Z Energy Limited. All trademarks are used under license.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
