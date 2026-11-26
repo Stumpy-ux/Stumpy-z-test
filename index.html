@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202611262039">
+  <link rel="stylesheet" href="styles.css?v=202611262155">
 </head>
 <body>
   <div class="page">
@@ -43,12 +43,12 @@
       <section class="section section--station">
         <h2 class="section__title section__title--navy">At the station</h2>
         <div class="chip-row">
-          <div class="svc-chip svc-chip--tall"><img src="assets/svc-paypump.svg" alt="">Pay at Pump</div>
-          <div class="svc-chip"><img src="assets/svc-carwash.svg" alt="">Car wash</div>
+          <button class="svc-chip svc-chip--tall" type="button" aria-pressed="false"><img src="assets/svc-paypump.svg" alt="">Pay at Pump</button>
+          <button class="svc-chip" type="button" aria-pressed="false"><img src="assets/svc-carwash.svg" alt="">Car wash</button>
         </div>
         <div class="chip-row" style="gap:17px">
-          <div class="svc-chip"><img src="assets/svc-ev.svg" alt="">EV charging</div>
-          <div class="svc-chip"><img src="assets/svc-lpg.svg" alt="">LPG swap</div>
+          <button class="svc-chip" type="button" aria-pressed="false"><img src="assets/svc-ev.svg" alt="">EV charging</button>
+          <button class="svc-chip" type="button" aria-pressed="false"><img src="assets/svc-lpg.svg" alt="">LPG swap</button>
         </div>
       </section>
     </main>
@@ -82,6 +82,6 @@
   </div>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=202611262039"></script>
+  <script src="app.js?v=202611262155"></script>
 </body>
 </html>
