@@ -177,8 +177,8 @@ p, h1, h2 { margin: 0; }
   background: #1d2630 url("assets/station-night.jpg") center / cover no-repeat;
   color: #fff;
 }
-.hub-hero__title { position: absolute; left: 24px; top: 11px; font-weight: 800; font-size: 28px; white-space: nowrap; }
-.hub-hero__sub { position: absolute; left: 24px; top: 57px; width: 132px; font-weight: 700; font-size: 15px; }
+.hub-hero__title { position: absolute; left: 24px; top: 11px; font-weight: 700; font-size: 28px; white-space: nowrap; }
+.hub-hero__sub { position: absolute; left: 24px; top: 57px; width: 132px; font-weight: 400; font-size: 15px; }
 .btn-locate {
   position: absolute; left: 24px; top: 144px;
   display: inline-flex; align-items: center; gap: 8px;
@@ -227,7 +227,7 @@ p, h1, h2 { margin: 0; }
   font-weight: 600; font-size: 14px; color: var(--z-text-strong);
 }
 .pill--sm { padding: 6px 12px; font-size: 13px; }
-.pill[aria-pressed="true"] { background: var(--z-orange); border-color: var(--z-text-strong); color: #fff; font-weight: 700; }
+.pill[aria-pressed="true"] { background: var(--z-navy); border-color: var(--z-text-strong); color: #fff; font-weight: 700; }
 
 /* ---------- Screen 02: map ---------- */
 .map {
@@ -288,7 +288,7 @@ p, h1, h2 { margin: 0; }
 .tabbar {
   position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
   width: 100%; max-width: 430px; z-index: 30;
-  display: flex; gap: 10px;
+  display: flex;
   height: calc(80px + env(safe-area-inset-bottom));
   padding: 8px 0 calc(20px + env(safe-area-inset-bottom));
   background: #fff; border-top: 1px solid var(--z-divider);
