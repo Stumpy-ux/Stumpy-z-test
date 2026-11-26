@@ -7,7 +7,7 @@
   <title>Z Energy – Journey Hub (Mobile 02)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,12 +20,12 @@
       <button class="nav__icon" type="button" aria-label="Menu" data-toast="Menu screen not built yet"><img src="assets/menu.svg" alt=""></button>
     </header>
 
-    <nav class="crumb" aria-label="Breadcrumb">
+    <a class="crumb" href="index.html" aria-label="Back to Z Home">
       <img src="assets/crumb-back.svg" alt="">
-      <a href="index.html">Z Home</a>
+      <span>Z Home</span>
       <span>/</span>
-      <strong aria-current="page">Journey Hub</strong>
-    </nav>
+      <strong>Journey Hub</strong>
+    </a>
 
     <main>
       <section class="hub-hero">
@@ -52,11 +52,6 @@
           <span class="nav-card__text"><span class="nav-card__title">Compare fuel prices</span><span class="nav-card__sub">See the cheapest fuel near you</span></span>
           <img class="nav-card__chev" src="assets/chevron-right.svg" alt="">
         </a>
-        <a class="nav-card" href="#" data-toast="Trip planner not built yet">
-          <span class="nav-card__icon"><img src="assets/nav-route.svg" alt=""></span>
-          <span class="nav-card__text"><span class="nav-card__title">Plan your trip</span><span class="nav-card__sub">Z stops and prices on your route</span></span>
-          <img class="nav-card__chev" src="assets/chevron-right.svg" alt="">
-        </a>
       </section>
 
       <section class="section" id="prices">
@@ -78,7 +73,7 @@
           <img class="map__acc" src="assets/you-accuracy.svg" alt="">
           <img class="map__dot" src="assets/you-dot.svg" alt="">
           <span class="map__here">You are here</span>
-          <button class="map-pin map-pin--cheap" type="button" style="left:16px;top:22px" data-station="0"><img src="assets/fuel-white.svg" alt="">$2.77 <small>Cheapest</small></button>
+          <button class="map-pin map-pin--cheap" type="button" style="left:7px;top:7px" data-station="0"><img src="assets/fuel-white.svg" alt="">$2.77 <small>Cheapest</small></button>
           <button class="map-pin" type="button" style="left:150px;top:64px;width:80px" data-station="1"><img src="assets/fuel-orange.svg" alt="">$2.79</button>
           <button class="map-pin" type="button" style="left:253px;top:130px;width:80px" data-station="2"><img src="assets/fuel-orange.svg" alt="">$2.81</button>
           <button class="map-pin" type="button" style="left:40px;top:160px;width:80px" data-station="3"><img src="assets/fuel-orange.svg" alt="">$2.85</button>
@@ -118,7 +113,7 @@
           <button type="button" aria-expanded="false">Rewards and promotions <img src="assets/chevron-down.svg" alt=""></button>
         </nav>
         <div class="footer__divider"></div>
-        <div class="footer__social"><img src="assets/social.svg" alt="Facebook, Instagram, LinkedIn, TikTok"></div>
+        <div class="footer__social"><img src="assets/social-facebook.svg" alt="Facebook"><img src="assets/social-instagram.svg" alt="Instagram"><img src="assets/social-linkedin.svg" alt="LinkedIn"><img src="assets/social-tiktok.svg" alt="TikTok"></div>
         <div>
           <p class="footer__app-title">Get the Z App</p>
           <div class="footer__badges">
