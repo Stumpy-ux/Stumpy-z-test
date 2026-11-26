@@ -59,3 +59,58 @@ document.querySelectorAll('.footer__menu button').forEach((btn) => {
     btn.setAttribute('aria-expanded', String(btn.getAttribute('aria-expanded') !== 'true'));
   });
 });
+
+// Hamburger menu (Figma: "Mobile menu (hamburger)") — built once here so both pages share it
+const menuBtn = document.querySelector('.nav button[aria-label="Menu"]');
+const nav = document.querySelector('.nav');
+
+if (menuBtn && nav) {
+  const hubLinks = [
+    { title: 'Journey Hub', sub: 'Stations, prices and trips', href: 'journey-hub.html' },
+    { title: 'Find a Z station', sub: 'Map and list of stations', href: 'journey-hub.html#prices' },
+    { title: 'Compare fuel prices', sub: 'Cheapest fuel near you', href: 'journey-hub.html#prices' },
+  ];
+  const moreLinks = ['At the station', 'Rewards and promotions', 'Z App', 'For business', 'About Z'];
+
+  const menu = document.createElement('nav');
+  menu.className = 'menu';
+  menu.id = 'site-menu';
+  menu.setAttribute('aria-label', 'Main menu');
+  menu.hidden = true;
+  menu.innerHTML = `
+    <p class="menu__label">JOURNEY HUB</p>
+    ${hubLinks.map(({ title, sub, href }) => `
+      <a class="menu__item" href="${href}">
+        <span class="menu__text"><span class="menu__title">${title}</span><span class="menu__sub">${sub}</span></span>
+        <img src="assets/menu-chevron.svg" alt="">
+      </a>`).join('')}
+    <p class="menu__label">MORE FROM Z</p>
+    ${moreLinks.map((title) => `
+      <button class="menu__item menu__item--more" type="button" data-more="${title}">
+        <span class="menu__text"><span class="menu__title">${title}</span></span>
+        <img src="assets/menu-chevron-muted.svg" alt="">
+      </button>`).join('')}
+  `;
+  document.body.appendChild(menu);
+
+  // The menu is a prototype screen now, so drop the "not built yet" toast on the icon
+  menuBtn.removeAttribute('data-toast');
+  menuBtn.replaceWith(menuBtn.cloneNode(true));
+  const btn = document.querySelector('.nav button[aria-label="Menu"]');
+  btn.setAttribute('aria-controls', 'site-menu');
+  btn.setAttribute('aria-expanded', 'false');
+
+  const setOpen = (open) => {
+    menu.style.setProperty('--menu-top', `${nav.getBoundingClientRect().bottom}px`);
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  btn.addEventListener('click', () => setOpen(menu.hidden));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  menu.querySelectorAll('a.menu__item').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  menu.querySelectorAll('[data-more]').forEach((b) => {
+    b.addEventListener('click', () => showToast(`${b.dataset.more} isn't part of this prototype`));
+  });
+}
